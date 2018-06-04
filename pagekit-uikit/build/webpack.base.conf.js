@@ -35,6 +35,8 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
+      'uikit-css': path.resolve(__dirname, '../node_modules/uikit/dist/css/uikit.min.css'),
+      'uikit-icons': path.resolve(__dirname, '../node_modules/uikit/dist/js/uikit-icons.min.js'),
       '@': resolve('src'),
     }
   },
