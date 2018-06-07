@@ -13,10 +13,12 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
     "uikit": "^3.0.0-rc.5",
     "vue": "^2.5.2",
     "vue-resource": "^1.5.1",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

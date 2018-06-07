@@ -37,6 +37,10 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       'uikit-css': path.resolve(__dirname, '../node_modules/uikit/dist/css/uikit.min.css'),
       'uikit-icons': path.resolve(__dirname, '../node_modules/uikit/dist/js/uikit-icons.min.js'),
+      'fontawesome': path.resolve(__dirname, '../node_modules/@fortawesome/fontawesome-free-webfonts/css/fontawesome.css'),
+      'fa-brands': path.resolve(__dirname, '../node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-brands.css'),
+      'fa-regular': path.resolve(__dirname, '../node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-regular.css'),
+      'fa-solid': path.resolve(__dirname, '../node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-solid.css'),
       '@': resolve('src'),
     }
   },

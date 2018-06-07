@@ -2,9 +2,16 @@
   <div id="app" class="uk-offcanvas-content">
     <div class="uk-navbar-container" uk-navbar style="background: #2d98da">
       <div class="uk-navbar-left">
-        <a href="#off-canvas" uk-toggle class="uk-navbar-item uk-logo" uk-icon="icon: uikit; ratio: 2"></a>
+        <a class="uk-navbar-item" href="#off-canvas" uk-toggle>
+          <span class="fa-stack fa-2x">
+            <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
+            <i class="fas fa-frog fa-stack-1x"></i>
+          </span>
+        </a>
+        <a class="uk-navbar-item uk-logo beatrix" href="#">BEATRICE</a>
       </div>
       <div class="uk-navbar-right">
+        <button class="uk-button uk-button-text">Text</button>
         <ul class="uk-navbar-nav">
           <li>
             <a href="#">Parent</a>
@@ -24,22 +31,31 @@
       </div>
     </div>
     <router-view/>
-    <div id="off-canvas" uk-offcanvas="overlay: true">
-      <div class="uk-offcanvas-bar">
-        <button class="uk-offcanvas-close" type="button" uk-close></button>
-        <h3>UIKit + Vue integration</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div id="off-canvas" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar">
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          <h3>UIKit + Vue integration</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
       </div>
-    </div>
   </div>
 </template>
 
 <script>
+import WebFont from 'webfontloader'
 import UIKit from 'uikit'
 import Icons from 'uikit-icons'
 import 'uikit-css'
+import 'fontawesome'
+import 'fa-solid'
 
 UIKit.use(Icons)
+
+WebFont.load({
+  google: {
+    families: ['Roboto', 'Open+Sans+Condensed:300']
+  }
+})
 
 export default {
   name: 'App'
@@ -47,6 +63,16 @@ export default {
 </script>
 
 <style>
+html, body {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+}
+
 .uk-navbar-nav > li > a {
   color: #d1d8e0;
   color: #2c3e50;
@@ -59,25 +85,20 @@ export default {
   color: #fff;
 }
 
-.uk-button {
-  border-radius: 500px;
+.uk-button-text, .uk-button-text:focus, .uk-button-text:hover, .uk-button-text::before {
   color: #fff;
+  border-bottom-color: #fff;
+}
+
+a.beatrix {
+  font-family: 'Open Sans Condensed', Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 24pt;
 }
 
 div.uk-navbar-container {
   background: #2D98DA;
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-a.uk-logo {
-  color: #ecf0f1;
-  color: white;
-}
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
 }
 </style>
