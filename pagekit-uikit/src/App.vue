@@ -1,31 +1,47 @@
 <template>
   <div id="app" class="uk-offcanvas-content">
-    <div class="uk-navbar-container" uk-navbar style="background: #2d98da">
+    <div class="uk-navbar-container uk-light" uk-navbar style="background: #2d98da">
       <div class="uk-navbar-left">
-        <a class="uk-navbar-item" href="#off-canvas" uk-toggle>
-          <span class="fa-stack fa-2x">
-            <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
-            <i class="fas fa-frog fa-stack-1x"></i>
-          </span>
+        <a class="uk-navbar-item uk-logo ui-logo" href="#off-canvas" uk-toggle>
+          <i class="fas fa-frog"></i>&nbsp;UI&#8226;Logo
         </a>
-        <a class="uk-navbar-item uk-logo beatrix" href="#">BEATRICE</a>
-      </div>
-      <div class="uk-navbar-right">
-        <button class="uk-button uk-button-text">Text</button>
         <ul class="uk-navbar-nav">
           <li>
-            <a href="#">Parent</a>
-            <div class="uk-navbar-dropdown">
-              <ul class="uk-nav uk-navbar-dropdown-nav">
-                <li class="uk-active"><a href="#">Active</a></li>
-                <li><a href="#">Item</a></li>
-                <li class="uk-nav-header">Header</li>
-                <li><a href="#">Item</a></li>
-                <li><a href="#">Item</a></li>
-                <li class="uk-nav-divider"></li>
-                <li><a href="#">Item</a></li>
-              </ul>
-            </div>
+            <a href="#">
+              <div class="uk-text-center">
+                <i class="fas fa-2x fa-university"></i>
+                <div class="uk-navbar-subtitle">
+                  <button class="uk-button uk-button-text">Establishments</button>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="uk-text-center">
+                <i class="fas fa-2x fa-user"></i>
+                <div class="uk-navbar-subtitle">
+                  <button class="uk-button uk-button-text">Users</button>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav" style="background: #45aaf2">
+          <li>
+            <a href="#">
+              <div class="uk-text-center">
+                Edgar Lee Masters
+                <div class="uk-navbar-subtitle">
+                  Astronaut
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-3x fa-user-astronaut"></i></a>
           </li>
         </ul>
       </div>
@@ -53,7 +69,7 @@ UIKit.use(Icons)
 
 WebFont.load({
   google: {
-    families: ['Roboto', 'Open+Sans+Condensed:300']
+    families: ['Roboto', 'Open+Sans+Condensed:300', 'Comfortaa']
   }
 })
 
@@ -64,18 +80,21 @@ export default {
 
 <style>
 html, body {
+
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a, a:hover, a:focus, a:active {
+a,
+a:hover, a:focus, a:active {
   text-decoration: none;
 }
 
 .uk-navbar-nav > li > a {
   color: #d1d8e0;
   color: #2c3e50;
+
 }
 
 .uk-navbar-nav > li:hover > a,
@@ -83,17 +102,20 @@ a, a:hover, a:focus, a:active {
 .uk-navbar-nav > li > a:focus,
 .uk-navbar-nav > li > a:active {
   color: #fff;
+
 }
 
 .uk-button-text, .uk-button-text:focus, .uk-button-text:hover, .uk-button-text::before {
   color: #fff;
   border-bottom-color: #fff;
+
 }
 
-a.beatrix {
-  font-family: 'Open Sans Condensed', Helvetica, Arial, sans-serif;
-  color: white;
+a.ui-logo {
+  font-family: 'Comfortaa', Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-size: 24pt;
+
 }
 
 div.uk-navbar-container {
