@@ -28,6 +28,14 @@
           </li>
         </ul>
       </div>
+      <div class="uk-navbar-center">
+        <div class="uk-navbar-item">
+          <form class="uk-search uk-search-navbar">
+            <span uk-search-icon></span>
+            <input class="uk-search-input" type="search" placeholder="Search...">
+          </form>
+        </div>
+      </div>
       <div class="uk-navbar-right">
         <ul class="uk-navbar-nav" style="background: #20bf6b">
           <li>

@@ -1,9 +1,26 @@
 <template>
   <div>
     <div class="">
-
+      <ul class="uk-subnav uk-subnav-pill" uk-margin>
+        <li class="uk-active"><a href="#">Active</a></li>
+        <li><a href="#">Item</a></li>
+        <li>
+          <a href="#">More <span uk-icon="icon:  triangle-down"></span></a>
+          <div uk-dropdown="mode: click;">
+            <ul class="uk-nav uk-dropdown-nav">
+              <li class="uk-active"><a href="#">Active</a></li>
+              <li><a href="#">Item</a></li>
+              <li class="uk-nav-header">Header</li>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="#">Item</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
     </div>
-    <table class="uk-table uk-table-striped uk-table-large">
+    <table class="uk-table uk-table-striped uk-table-large uk-table-hover">
       <thead>
         <tr>
           <th>Table Heading</th>
