@@ -29,7 +29,7 @@
         </ul>
       </div>
       <div class="uk-navbar-right">
-        <ul class="uk-navbar-nav" style="background: #45aaf2">
+        <ul class="uk-navbar-nav" style="background: #20bf6b">
           <li>
             <a href="#">
               <div class="uk-text-center">
