@@ -16,7 +16,8 @@
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
     "buefy": "^0.6.6",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
