@@ -1,113 +1,56 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+  <div class="card">
+    <div class="card-content">
+      <nav class="level">
+        <!-- Left side -->
+        <div class="level-left">
+          <div class="level-item">
+            <figure class="image">
+              <i class="fas fa-user-circle fa-3x"></i>
+            </figure>
+          </div>
+          <div class="level-item">
+            <p class="subtitle is-5">
+            <strong>Walter Hartwell White</strong>
+            </p>
+          </div>
+          <div class="level-item">
+            <div class="field has-addons">
+              <p class="control">
+              <input class="input" type="text" placeholder="Find a post">
+              </p>
+              <p class="control">
+              <button class="button">
+                Search
+              </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right side -->
+        <div class="level-right">
+          <b-tabs type="is-toggle">
+            <b-tab-item label="Pictures" icon="google-photos"></b-tab-item>
+            <b-tab-item label="Music" icon="library-music"></b-tab-item>
+            <b-tab-item label="Videos" icon="video"></b-tab-item>
+          </b-tabs>
+        </div>
+      </nav>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
+  data: () => ({ msg: 'Welcome to Your Vue.js App' })
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+<style>
+.b-tabs .tab-content {
+  padding:0;
 }
 </style>
