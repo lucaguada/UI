@@ -5,6 +5,15 @@ import App from './App'
 import router from './router'
 import Buefy from 'buefy'
 import 'buefy/lib/buefy.css'
+import WebFont from 'webfontloader'
+import 'fontawesome'
+import 'fa-solid'
+
+WebFont.load({
+  google: {
+    families: ['Lobster', 'Roboto', 'Open+Sans+Condensed:300', 'Comfortaa']
+  }
+})
 
 Vue.use(Buefy)
 

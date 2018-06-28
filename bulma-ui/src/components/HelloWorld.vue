@@ -11,18 +11,18 @@
           </div>
           <div class="level-item">
             <p class="subtitle is-5">
-            <strong>Walter Hartwell White</strong>
+              <strong>Walter Hartwell White</strong>
             </p>
           </div>
           <div class="level-item">
             <div class="field has-addons">
               <p class="control">
-              <input class="input" type="text" placeholder="Find a post">
+                <input class="input" type="text" placeholder="Find a post">
               </p>
               <p class="control">
-              <button class="button">
-                Search
-              </button>
+                <button class="button">
+                  Search
+                </button>
               </p>
             </div>
           </div>
@@ -44,13 +44,13 @@
 <script>
 export default {
   name: 'HelloWorld',
-  data: () => ({ msg: 'Welcome to Your Vue.js App' })
+  data: () => ({msg: 'Welcome to Your Vue.js App'})
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 .b-tabs .tab-content {
-  padding:0;
+  padding: 0;
 }
 </style>
