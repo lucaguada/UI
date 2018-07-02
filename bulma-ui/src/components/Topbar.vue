@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar is-danger">
+  <nav class="navbar is-light">
     <div class="navbar-brand">
       <a class="navbar-item" href="#">
         <i class="fas fa-2x fa-gem" style="color:#55efc4"></i>
@@ -53,15 +53,8 @@
 </template>
 
 <script>
-import WebFont from 'webfontloader'
 import 'fontawesome'
 import 'fa-solid'
-
-WebFont.load({
-  google: {
-    families: ['Lobster', 'Roboto', 'Open+Sans+Condensed:300', 'Comfortaa']
-  }
-})
 
 export default {
   name: 'Topbar'
@@ -70,7 +63,7 @@ export default {
 
 <style>
 span.logo {
-  font-family: 'Lobster';
+  font-family: 'Lobster',sans-serif;
   font-size: 18pt;
 }
 </style>
