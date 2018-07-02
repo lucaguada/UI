@@ -5,10 +5,17 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import App from './App'
+import WebFont from 'webfontloader'
 import 'fontawesome'
 import 'fa-solid'
 
 Vue.use(ElementUI)
+
+WebFont.load({
+  google: {
+    families: ['Lobster', 'Roboto', 'Open+Sans+Condensed:300', 'Comfortaa']
+  }
+})
 
 Vue.config.productionTip = false
 

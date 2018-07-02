@@ -1,11 +1,19 @@
 <template>
-  <el-row type="flex" :gutter="20" style="margin: 0">
-    <el-col :span="23" style="text-align: right; padding: 1rem">
-      <el-badge :value="100" :max="10" class="item">
-        <i class="fas fa-2x fa-bell" style="color: #f5f6fa"></i>
-      </el-badge>
+  <el-row type="flex" :gutter="20" style="margin: 0; text-align: right;">
+    <el-col :span="14" style="text-align: right; padding: 1rem 2rem 0 0">
+      <search-input></search-input>
     </el-col>
-    <el-col :span="1" style="text-align: right;">
+    <el-col :span="8" style="text-align: right; padding: 1rem 2rem 0 0">
+      <add-button></add-button>
+    </el-col>
+    <el-col :span="1" style="text-align: right; padding: 0.8rem 2rem 0 0">
+      <el-button type="text">
+        <el-badge :value="100" :max="10" class="item">
+          <i class="fas fa-2x fa-bell" style="color: #f5f6fa"></i>
+        </el-badge>
+      </el-button>
+    </el-col>
+    <el-col :span="1">
       <el-popover placement="bottom" trigger="click">
         <el-card class="box-card">
           <div slot="header" class="clearfix">
@@ -24,8 +32,12 @@
 </template>
 
 <script>
+import SearchInput from '@/components/SearchInput'
+import AddButton from '@/components/AddButton'
+
 export default {
-  name: 'Topbar'
+  name: 'Topbar',
+  components: {AddButton, SearchInput}
 }
 </script>
 
