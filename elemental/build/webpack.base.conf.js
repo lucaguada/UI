@@ -35,10 +35,10 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      'fontawesome': path.resolve(__dirname, '../node_modules/@fortawesome/fontawesome-free-webfonts/css/fontawesome.css'),
-      'fa-brands': path.resolve(__dirname, '../node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-brands.css'),
-      'fa-regular': path.resolve(__dirname, '../node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-regular.css'),
-      'fa-solid': path.resolve(__dirname, '../node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-solid.css'),
+      'fontawesome': path.resolve(__dirname, '../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css'),
+      'fa-brands': path.resolve(__dirname, '../node_modules/@fortawesome/fontawesome-free/css/brands.css'),
+      'fa-regular': path.resolve(__dirname, '../node_modules/@fortawesome/fontawesome-free/css/regular.css'),
+      'fa-solid': path.resolve(__dirname, '../node_modules/@fortawesome/fontawesome-free/css/solid.css'),
       '@': resolve('src'),
     }
   },

@@ -4,10 +4,10 @@
       <el-card class="box-card" style="width: 100%; background: #273c75; border: 0; color: #f5f6fa">
         <div slot="header" class="clearfix">
           <img id="profile-avatar" src="/static/profile.png" width="128" height="128">
-          <h2>Walter Hartwell White</h2>
+          <h2>Walter Hartwell White Sr.</h2>
           <el-tag size="small" type="warning">Vamonos Pest</el-tag>
-          <i class="fas fa-fw fa-eye-dropper" style="color: #F56C6C"></i>
-          256 drops
+          <i class="fas fa-fw fa-flask" style="color: #00a8ff"></i>
+          256 recipes
         </div>
         <el-form label-position="top" label-width="100px" style="text-align: left" size="mini">
           <el-form-item label="Email">
@@ -23,24 +23,19 @@
       </el-card>
     </el-col>
     <el-col :span="18">
-      <el-tabs type="border-card">
+      <el-tabs>
         <el-tab-pane>
-          <div slot="label" class="tab-label"><i class="fas fa-fw fa-id-card"></i> Details</div>
-          <el-card></el-card>
-          <el-card></el-card>
-          <el-card></el-card>
-          <el-card></el-card>
-          <el-card></el-card>
-          <el-card></el-card>
+          <div slot="label" class="tab-label"><i class="fas fa-fw fa-address-card"></i> Details</div>
+          <user-details></user-details>
         </el-tab-pane>
         <el-tab-pane>
-          <div slot="label" class="tab-label"><i class="fas fa-fw fa-id-card"></i> Details</div>
+          <div slot="label" class="tab-label"><i class="fas fa-fw fa-user-circle"></i> Account</div>
         </el-tab-pane>
         <el-tab-pane>
-          <div slot="label" class="tab-label"><i class="fas fa-fw fa-id-card"></i> Details</div>
+          <div slot="label" class="tab-label"><i class="fas fa-fw fa-file-signature"></i> Signed Docs.</div>
         </el-tab-pane>
         <el-tab-pane>
-          <div slot="label" class="tab-label"><i class="fas fa-fw fa-id-card"></i> Details</div>
+          <div slot="label" class="tab-label"><i class="fas fa-fw fa-cogs"></i> Settings</div>
         </el-tab-pane>
       </el-tabs>
     </el-col>
@@ -48,8 +43,11 @@
 </template>
 
 <script>
+import UserDetails from '@/components/UserDetails.vue'
+
 export default {
-  name: 'Profile'
+  name: 'Profile',
+  components: {UserDetails}
 }
 </script>
 
@@ -63,7 +61,7 @@ export default {
   color: #7f8fa6;
 }
 
-.el-tabs--border-card>.el-tabs__header .el-tabs__item.is-active {
+.el-tabs--border-card > .el-tabs__header .el-tabs__item.is-active {
   background-color: #273c75;
   color: #f5f6fa;
 }
@@ -83,7 +81,7 @@ div.tab-label.el-tabs__item.is-active {
   color: #487eb0;
 }
 
-div.el-tabs__content {
+div.el-tabs__content2 {
   background-color: #273c75;
 }
 </style>

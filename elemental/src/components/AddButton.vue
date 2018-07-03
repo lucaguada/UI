@@ -15,9 +15,9 @@
       <el-menu-item index="1"><i class="fas fa-fw fa-user"></i> User</el-menu-item>
       <el-menu-item index="2"><i class="fas fa-fw fa-user"></i> Establishment</el-menu-item>
       <el-menu-item index="3"><i class="fas fa-fw fa-users"></i> Group</el-menu-item>
-      <el-menu-item index="4"><i class="fas fa-fw fa-piggy-bank"></i> Bank</el-menu-item>
+      <el-menu-item index="4" @click="addBank"><i class="fas fa-fw fa-piggy-bank"></i> Bank</el-menu-item>
     </el-menu>
-    <el-button type="success" slot="reference" round><i class="fas fa-fw fa-plus-circle"></i> Add
+    <el-button type="primary" slot="reference" plain round><i class="fas fa-fw fa-plus-circle"></i> Add
       <i class="fas fa-fw fa-chevron-down"></i></el-button>
   </el-popover>
 </template>
@@ -28,6 +28,27 @@ export default {
   mounted () {
     const popover = document.getElementById('add-menu').parentElement
     popover.classList.add('add-menu-popover')
+  },
+  methods: {
+    addBank () {
+      this.$prompt('Please input a bank', 'Bank', {
+        confirmButtonText: 'Save',
+        cancelButtonText: 'Cancel'
+        // inputPattern: /[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/,
+        // inputErrorMessage: 'Invalid Email'
+      }).then(response => response.value)
+        .then(value => {
+          this.$message({
+            type: 'success',
+            message: `Bank «${value}» added.`
+          })
+        }).catch(() => {
+          this.$message({
+            type: 'info',
+            message: 'New bank canceled.'
+          })
+        })
+    }
   }
 }
 </script>

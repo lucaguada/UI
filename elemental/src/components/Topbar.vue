@@ -3,7 +3,8 @@
     <el-col :span="14" style="text-align: right; padding: 1rem 2rem 0 0">
       <search-input></search-input>
     </el-col>
-    <el-col :span="8" style="text-align: right; padding: 1rem 2rem 0 0">
+    <el-col :span="8" style="text-align: right; padding: 1rem 1rem 0 0">
+      <save-button style="margin-right: 1rem"></save-button>
       <add-button></add-button>
     </el-col>
     <el-col :span="1" style="text-align: right; padding: 0.8rem 2rem 0 0">
@@ -34,10 +35,11 @@
 <script>
 import SearchInput from '@/components/SearchInput'
 import AddButton from '@/components/AddButton'
+import SaveButton from '@/components/SaveButton'
 
 export default {
   name: 'Topbar',
-  components: {AddButton, SearchInput}
+  components: {AddButton, SearchInput, SaveButton}
 }
 </script>
 

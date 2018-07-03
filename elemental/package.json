@@ -13,8 +13,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
-    "element-ui": "^2.4.2",
+    "@fortawesome/fontawesome-free": "^5.1.0",
+    "element-ui": "^2.4.3",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "webfontloader": "^1.6.28"

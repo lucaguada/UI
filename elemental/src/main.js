@@ -8,6 +8,8 @@ import App from './App'
 import WebFont from 'webfontloader'
 import 'fontawesome'
 import 'fa-solid'
+import 'fa-regular'
+import 'fa-brands'
 
 Vue.use(ElementUI)
 
