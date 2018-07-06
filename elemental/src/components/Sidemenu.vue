@@ -5,7 +5,7 @@
     default-active="/datatable"
     background-color="#273c75"
     text-color="#7f8fa6"
-    active-text-color="#487eb0"
+    active-text-color="#ED4C67"
     :collapse="true">
     <el-menu-item id="logo" index="/">
       <img src="/static/logo.png" width="48" height="48">

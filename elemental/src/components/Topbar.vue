@@ -3,7 +3,7 @@
     <el-col :span="14" style="text-align: right; padding: 1rem 2rem 0 0">
       <search-input></search-input>
     </el-col>
-    <el-col :span="8" style="text-align: right; padding: 1rem 1rem 0 0">
+    <el-col :span="8" style="text-align: right; padding: 1.4rem 1rem 0 0">
       <save-button style="margin-right: 1rem"></save-button>
       <add-button></add-button>
     </el-col>
@@ -21,12 +21,11 @@
             <span>Card name</span>
             <el-button style="float: right; padding: 3px 0" type="text">Operation button</el-button>
           </div>
-          <div v-for="o in 4" :key="o" class="text item">
-            {{'List item ' + o }}
+          <div v-for="user in users" :key="user" class="text item">
+            {{`List item ${user.firstName + ' ' + user.lastName}`}}
           </div>
         </el-card>
-        <el-button slot="reference" type="text"><img id="avatar" src="/static/avatar.png" width="42" height="42">
-        </el-button>
+        <el-button slot="reference" type="text"><img id="avatar" src="/static/avatar.png" width="42" height="42"></el-button>
       </el-popover>
     </el-col>
   </el-row>
@@ -36,10 +35,20 @@
 import SearchInput from '@/components/SearchInput'
 import AddButton from '@/components/AddButton'
 import SaveButton from '@/components/SaveButton'
+import axios from 'axios'
 
 export default {
   name: 'Topbar',
-  components: {AddButton, SearchInput, SaveButton}
+  components: {AddButton, SearchInput, SaveButton},
+  data: () => ({
+    users: []
+  }),
+  mounted () {
+    axios.get('http://localhost:8090/api/users')
+      .then(response => response.data)
+      .then(console.log)
+      .catch(console.log)
+  }
 }
 </script>
 

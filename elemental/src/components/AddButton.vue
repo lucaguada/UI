@@ -2,7 +2,6 @@
   <el-popover
     style="border: 0"
     name="hi-there"
-    :visible-arrow="false"
     placement="bottom"
     width="auto"
     trigger="click">
@@ -17,7 +16,7 @@
       <el-menu-item index="3"><i class="fas fa-fw fa-users"></i> Group</el-menu-item>
       <el-menu-item index="4" @click="addBank"><i class="fas fa-fw fa-piggy-bank"></i> Bank</el-menu-item>
     </el-menu>
-    <el-button type="primary" slot="reference" plain round><i class="fas fa-fw fa-plus-circle"></i> Add
+    <el-button type="primary" slot="reference" size="small" plain round><i class="fas fa-fw fa-plus-circle"></i> Add
       <i class="fas fa-fw fa-chevron-down"></i></el-button>
   </el-popover>
 </template>
@@ -54,6 +53,11 @@ export default {
 </script>
 
 <style>
+.add-menu-popover > .popper__arrow,
+.add-menu-popover > .popper__arrow::after {
+  border-bottom-color: #273c75 !important;
+}
+
 .add-menu-popover {
   padding: 0 !important;
   border-color: #273c75 !important;
