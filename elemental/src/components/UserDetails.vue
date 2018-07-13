@@ -1,13 +1,13 @@
 <template>
   <el-row :gutter="20">
     <el-col :span="12">
-      <el-card style="text-align: left">
+      <el-card style="text-align: left" class="card-dark">
         <el-form ref="form" :model="form" label-width="120px">
           <el-form-item label="Activity name">
-            <el-input v-model="form.name"></el-input>
+            <el-input v-model="form.name" class="input-dark"></el-input>
           </el-form-item>
           <el-form-item label="Activity zone">
-            <el-select v-model="form.region" placeholder="please select your zone">
+            <el-select v-model="form.region" placeholder="please select your zone" value="">
               <el-option label="Zone one" value="shanghai"></el-option>
               <el-option label="Zone two" value="beijing"></el-option>
             </el-select>
@@ -75,3 +75,27 @@ export default {
   }
 }
 </script>
+
+<style>
+.card-dark {
+  background: #273c75;
+  border: 0;
+  color: #f5f6fa
+}
+
+.input-dark > .el-input__inner {
+  background: #192a56;
+  border-color: #192a56;
+  color: #fafafa;
+}
+
+.input-dark > .el-input__inner:hover,
+.input-dark > .el-input__inner:active,
+.input-dark > .el-input__inner:focus {
+/*
+  background: #273c75;
+*/
+  border-color: #ED4C67;
+  color: #f5f6fa
+}
+</style>
