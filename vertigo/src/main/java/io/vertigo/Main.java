@@ -1,15 +1,23 @@
-package io.trydent.vertigo;
+package io.vertigo;
 
+import io.vertigo.data.DbClient;
+import io.vertigo.data.DbSource;
 import io.vertx.core.http.HttpMethod;
+import io.vertx.core.json.JsonArray;
+import io.vertx.ext.sql.ResultSet;
+import io.vertx.ext.sql.SQLClient;
 import io.vertx.ext.web.handler.CorsHandler;
+import org.h2.Driver;
 
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Set;
+import java.util.UUID;
 
 import static io.vertx.core.Vertx.vertx;
 import static io.vertx.ext.web.Router.router;
 import static java.lang.String.format;
+import static java.lang.System.out;
 
 public interface Main {
   final class User {
@@ -86,6 +94,29 @@ public interface Main {
       it.response()
         .putHeader("Content-Type", "application/json")
         .end(Arrays.toString(users))
+    );
+
+    final DbClient client = DbSource.of("sa", "", "jdbc:h2:~/vertigo", Driver.class).clientOf(vertx);
+    final SQLClient sql = client.get();
+    sql.call("create table if not exists fighter(id varchar(36) not null, first_name varchar(50) not null, last_name varchar(50), primary key (id))", it -> {
+      if (it.succeeded()) out.println("Tabella creata");
+      if (it.failed()) out.println(it.cause().getMessage());
+    });
+    sql.updateWithParams(
+      "insert into fighter values(?, ?, ?)",
+      new JsonArray()
+        .add(UUID.randomUUID().toString())
+        .add("Terry")
+        .add("Bogard"),
+      it -> {
+        if (it.succeeded()) out.println("Aggiunto personaggio");
+        if (it.failed()) out.println(it.cause().getMessage());
+      });
+    sql.query("select * from fighter", it ->
+      it
+        .map(ResultSet::getResults)
+        .result()
+        .forEach(out::println)
     );
 
     vertx
