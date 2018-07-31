@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import router from './router'
 import ElementUI from 'element-ui'
+import locale from 'element-ui/lib/locale/lang/en'
 import 'element-ui/lib/theme-chalk/index.css'
 import App from './App'
 import WebFont from 'webfontloader'
@@ -11,7 +12,7 @@ import 'fa-solid'
 import 'fa-regular'
 import 'fa-brands'
 
-Vue.use(ElementUI)
+Vue.use(ElementUI, { locale })
 
 WebFont.load({
   google: {

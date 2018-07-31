@@ -1,19 +1,21 @@
 package io.vertigo.person;
 
-import io.vertigo.data.DbClient;
+import io.vertigo.db.Db;
+import io.vertx.ext.sql.SQLClient;
 
 import java.util.Iterator;
 
 final class DbPersons implements Persons {
-  private final DbClient client;
+  private final Db db;
 
-  DbPersons(DbClient client) {
-    this.client = client;
+  DbPersons(Db db) {
+    this.db = db;
   }
 
   @Override
   public final Iterator<Person> iterator() {
-    final var client = this.client.get();
+    final var sql = db.get();
+    sql.queryWithParams("select * from ")
     return null;
   }
 }

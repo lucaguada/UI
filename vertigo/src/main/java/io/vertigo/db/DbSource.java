@@ -1,4 +1,4 @@
-package io.vertigo.data;
+package io.vertigo.db;
 
 import io.vertx.core.Vertx;
 
@@ -18,7 +18,7 @@ public interface DbSource extends Supplier<DataSource> {
     );
   }
 
-  default DbClient clientOf(final Vertx vertx) {
-    return DbClient.of(this, vertx);
+  default Db clientOf(final Vertx vertx) {
+    return Db.databaseOf(this, vertx);
   }
 }

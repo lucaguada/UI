@@ -1,7 +1,7 @@
 package io.vertigo;
 
-import io.vertigo.data.DbClient;
-import io.vertigo.data.DbSource;
+import io.vertigo.db.Db;
+import io.vertigo.db.DbSource;
 import io.vertx.core.http.HttpMethod;
 import io.vertx.core.json.JsonArray;
 import io.vertx.ext.sql.ResultSet;
@@ -96,7 +96,7 @@ public interface Main {
         .end(Arrays.toString(users))
     );
 
-    final DbClient client = DbSource.of("sa", "", "jdbc:h2:~/vertigo", Driver.class).clientOf(vertx);
+    final Db client = DbSource.of("sa", "", "jdbc:h2:~/vertigo", Driver.class).clientOf(vertx);
     final SQLClient sql = client.get();
     sql.call("create table if not exists fighter(id varchar(36) not null, first_name varchar(50) not null, last_name varchar(50), primary key (id))", it -> {
       if (it.succeeded()) out.println("Tabella creata");

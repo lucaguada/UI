@@ -1,4 +1,4 @@
-package io.vertigo.data;
+package io.vertigo.db;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

@@ -1,4 +1,4 @@
-package io.vertigo.data;
+package io.vertigo.db;
 
 import io.vertx.core.Vertx;
 import io.vertx.ext.sql.SQLClient;
@@ -7,9 +7,9 @@ import java.util.function.Supplier;
 
 import static java.util.Objects.requireNonNull;
 
-public interface DbClient extends Supplier<SQLClient> {
-  static DbClient of(final DbSource source, final Vertx vertx) {
-    return new DbClientImpl(
+public interface Db extends Supplier<SQLClient> {
+  static Db databaseOf(final DbSource source, final Vertx vertx) {
+    return new DbImpl(
       requireNonNull(source, "Source is null"),
       requireNonNull(vertx, "Vertx is null")
     );

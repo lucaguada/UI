@@ -67,7 +67,7 @@ export default {
 }
 
 .el-tabs__active-bar {
-  background-color: #40739e;
+  background-color: #ED4C67;
 }
 
 div.tab-label {
@@ -77,8 +77,13 @@ div.tab-label {
   font-variant: small-caps;
 }
 
-div.tab-label.el-tabs__item.is-active {
-  color: #487eb0;
+div.el-tabs__item:hover {
+  -webkit-transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+  transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+}
+
+div.tab-label.el-tabs__item.is-active, div.el-tabs__item:hover, div.el-tabs__item.is-active {
+  color: #ed4c67;
 }
 
 div.el-tabs__content2 {
